@@ -1,10 +1,11 @@
 import React, { forwardRef, useState, useEffect, useRef } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import type { HTMLMotionProps } from "framer-motion";
+import type { MotionProps } from "framer-motion";
+import type { HTMLProps } from "react";
 
 // Create a properly typed wrapper around motion.nav
-const MotionNav = forwardRef<HTMLElement, HTMLMotionProps<"nav">>(
+const MotionNav = forwardRef<HTMLElement, HTMLProps<HTMLElement> & MotionProps>(
   (props, ref) => <motion.nav ref={ref} {...props} />
 );
 
